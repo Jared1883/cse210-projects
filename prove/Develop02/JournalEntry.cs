@@ -7,7 +7,7 @@ class JournalEntry
 
     string _response;
 
-    
+    // Finish code, need more pr omprts
     string[] _prompts =
     {
         "How are you feeling today?",
@@ -17,6 +17,8 @@ class JournalEntry
     public void CreateJournalEntry ()
     {
         _date = DateTime.Now.ToShortDateString();
+
+        //Finish this code - need a random prompt
         _prompt = _prompts[0];
         Console.WriteLine(_prompt);        
         _response = Console.ReadLine();
@@ -26,4 +28,10 @@ class JournalEntry
     {
         Console.WriteLine($"{_date}, {_prompt}, {_response}");
     }
+
+    public string CreateFileSystemString()
+    {
+        return $"{_date}#{_prompt}#{_response}";
+    }
+
 }

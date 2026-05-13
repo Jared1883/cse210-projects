@@ -4,9 +4,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        JournalEntry journalEntry = new JournalEntry();
-        journalEntry.CreateJournalEntry();
-        journalEntry.DisplayJournalEntry();
+        JournalEntry myJournalEntry = new JournalEntry();
+        myJournalEntry.CreateJournalEntry();
+        // myJournalEntry.DisplayJournalEntry();
+        // Console.WriteLine(myJournalEntry.CreateFileSystemString());
+        JournalEntry myJournalEntry2 = new JournalEntry();
+        myJournalEntry2.CreateJournalEntry();
+
+        Journal myJournal = new Journal();
+        myJournal.AddJournalEntry(myJournalEntry);
+        myJournal.AddJournalEntry(myJournalEntry2);
+
+        myJournal.DisplayJournal();
+
 
     }
 }
