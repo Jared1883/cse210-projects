@@ -77,8 +77,10 @@ class Program
                 myJournal._journalEntries.Clear();
                 foreach(string line in lines.Skip(1))
                 {
+                    //Splits the line of the file by the commas
                     string[] parts = line.Split(",");
                     JournalEntry journalEntry = new();
+                    //Takes out any quotes so it can be processed easier
                     journalEntry._date = parts[0].Trim('"');
                     journalEntry._prompt = parts[1].Trim('"');
                     journalEntry._response = parts[2].Trim('"');
